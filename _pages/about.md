@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://en.whu.edu.cn/'>Wuhan University</a>
+subtitle: Computer Science BS student at <a href='https://en.whu.edu.cn/'>Wuhan University</a>
 
 profile:
   align: right
@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
- Hi! I'm an undergradate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
+ I'm an undergradate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
  
  I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. Other than this I'm also curious about operating systems, virtualization technologies, and many more. 
  
