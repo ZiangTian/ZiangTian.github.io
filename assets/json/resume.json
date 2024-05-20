@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Ziang Tian",
+    "label": "Undergraduate student in computer science",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "ziangtian@whu.edu.cn",
+    "phone": "",
+    "url": "https://ziangtian.github.io/",
+    "summary": "An undergraduate student in the School of Computer Science at Wuhan University, interested in memory systems",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
