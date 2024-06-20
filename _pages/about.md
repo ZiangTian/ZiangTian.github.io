@@ -6,7 +6,7 @@ subtitle: Computer Science BS student at <a href='https://en.whu.edu.cn/'>Wuhan 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: tza.jpg
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>Wuchang District</p>
