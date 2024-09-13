@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
+title: Implementation of the Raft distributed systems
 description: another without an image
-img:
+img: assets/img/11.jpg
 importance: 3
-category: fun
+category: Non-Research
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
+title: A 5-level Pipelined RISC-V Processor
 description: a project with a background image
 img: assets/img/1.jpg
 importance: 3
-category: fun
+category: Non-Research
 ---
 
 Every project has a beautiful feature showcase page.

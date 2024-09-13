@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Reducing re-encryption incurred writes
+description: AES-CTR memory systems
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: Research
 related_publications: true
 ---
 
