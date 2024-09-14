@@ -18,9 +18,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
- I'm an undergradate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
+ I'm an undergraduate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
  
- I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. Other than this I'm also curious about operating systems, virtualization technologies, and many more. 
+ I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. I'm currently doing research on AES-based counter-mode encryption (AES-CTR) and side channel attacks. Other than this I'm also curious about operating systems, virtualization technologies, and many more. 
  
  I'm eagerly looking for PhD advisors! Please do not hesitate to contact me via [my email](mailto:ziangtian320@gmail.com?subject=Test)!
 
