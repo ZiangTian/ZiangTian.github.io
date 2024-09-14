@@ -20,9 +20,9 @@ social: true # includes social icons at the bottom of the page
 
  I'm an undergraduate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
  
- I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. I'm currently doing research on AES-based counter-mode encryption (AES-CTR) and side channel attacks. Other than this I'm also curious about operating systems, virtualization technologies, and many more. 
+ I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. I'm currently doing research on AES-based counter-mode encryption (AES-CTR) and side channel attacks. Other than this I'm also curious about operating systems, virtualization technologies, and many more. For projects that I did and contributed to, please see my CV here. 
  
- I'm eagerly looking for PhD advisors! Please do not hesitate to contact me via [my email](mailto:ziangtian320@gmail.com?subject=Test)!
+ I'm eagerly looking for PhD advisors! Please do not hesitate to contact me via [my email](mailto:ziangtian@whu.edu.cn?subject=PhD)!
 
 <!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
