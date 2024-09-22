@@ -1,8 +1,8 @@
 ---
 layout: page
-title: A 5-level Pipelined RISC-V Processor
-description: a project with a background image
-img: assets/img/1.jpg
+title: CPU in verilog
+description: A 5-level Pipelined RISC-V Processor
+img: assets/img/CPU.jpg
 importance: 3
 category: Non-Research
 ---

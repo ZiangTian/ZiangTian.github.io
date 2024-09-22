@@ -1,80 +1,40 @@
 ---
 layout: page
-title: Implementation of a dynamic memory allocator in xv6 OS
-description: a project with no image
-img:
+title: A memory allocator
+description: Implementation of a dynamic memory allocator in xv6 OS
+img: assets/img/memalloc.jpg
 importance: 4
 category: Non-Research
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The experiment includes designing and implementing a dynamic memory allocator for allocating and releasing memory blocks of different sizes for users' programs at runtime, and testing it to verify its correctness and performance. 
+This experiment implements the Buddy memory allocator.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+As shown in the figure below, the principle of the Buddy memory allocator is to treat a whole block of available memory as a whole. When memory needs to be allocated, it's repeatedly split in half until a block of the appropriate size is obtained. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/ZiangTian/img-bed/main/20240611203614.png" alt="buddy" style="zoom:33%;">
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The two sub-blocks obtained by dividing the same block are called "Buddies". When memory is released, in addition to releasing the block that needs to be released, 
+it is also necessary to check whether its "Buddy" is free. If so, it can be merged upwards. 
+The Buddy memory allocator is suitable for responding to larger memory requests, and because of the Buddy's merging mechanism, external memory fragmentation can be minimized as much as possible.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+This experiment does not use a linked list structure to manage memory blocks, but instead uses a **bitmap** to manage them all, maintaining a binary tree structure composed of a series of bitmaps. For the allocated memory size $n$ (in units of the smallest memory block size), there are a total of $l = log2 n + 1$ Buddy memory block sizes, the maximum block size is the smallest power of 2 greater than n; the minimum block size is defined as a constant `LEAF_SIZE` = 16 bytes. When they are treated as a tree structure, there are n nodes at the bottom root node, each of which is 16 bytes, and there is one node at the top level, which is 16n bytes in size.
+Take a 4-level buddy system as an example, as shown in the figure below:
+
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/ZiangTian/img-bed/main/20240611203855.png" alt="buddy" style="zoom:83%;">
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+As shown in the figure below, for a block, if it is not a block of l = 0, the two sub-blocks obtained by dividing it, which are mutually buddy, are defined as its left sub-block and right sub-block, respectively; if it is not a top-level block, the block that is generated by division is defined as its parent block. At the same time, for each layer of blocks, from left to right (in the direction of increasing address), the index is marked as 0. For each layer of blocks, two arrays are maintained: aaaa and spppp, the length of the array is the number of blocks.
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/ZiangTian/img-bed/main/20240611203942.png" alt="buddy" style="zoom:53%;">
 </div>
-```
 
-{% endraw %}
+
+- `allocated` indicates whether the corresponding block has been allocated as a whole;
+- `split` indicates whether any part of the corresponding block has been divided and allocated;
+
+Since each element of the above two arrays only needs one bit to represent the state, a bitmap is used to reduce the overhead of managing memory data structures. For example, in a char array, each element consists of 8 bits, so a char array of k elements can manage 8k blocks.

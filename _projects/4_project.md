@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Implementation of the Raft distributed systems
-description: another without an image
-img: assets/img/11.jpg
+title: Raft
+description: Implementation of the Raft distributed systems
+img: assets/img/raft.png
 importance: 3
 category: Non-Research
 ---
