@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 description: Research I participated in, and cool projects I did in my free time.
-nav: true
+nav: false
 nav_order: 3
 display_categories: [Research, Non-Research]
 horizontal: false
