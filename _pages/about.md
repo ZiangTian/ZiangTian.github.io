@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 
  I'm an undergraduate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
  
- I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. I'm currently doing research on AES-based counter-mode encryption (AES-CTR) and side channel attacks. Other than this I'm also curious about operating systems, virtualization technologies, and many more. For projects that I did and contributed to, please see my CV [here](https://ziangtian.github.io/assets/pdf/ziangtian_cv.pdf). 
+ I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. I'm currently doing research on AES-based counter-mode encryption (AES-CTR) and side channel attacks. But for the long term, I'm more fascinated by how the operating system and architecture can be co-designed for defenses or attacks. For projects that I did and contributed to, please see my CV [here](https://ziangtian.github.io/assets/pdf/ziangtian_cv.pdf). 
  
  I'm eagerly looking for PhD advisors! Please do not hesitate to contact me via [my email](mailto:ziangtian@whu.edu.cn?subject=PhD)!
 
