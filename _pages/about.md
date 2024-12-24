@@ -20,9 +20,14 @@ social: true # includes social icons at the bottom of the page
 
  I'm an undergraduate student in the School of Computer Science at Wuhan University, China, expecting to graduate in 2025. 
  
- I like to explore the internals and dynamics of computer systems, and my current research interest revolves around building secure memory systems. I'm currently doing research on AES-based counter-mode encryption (AES-CTR) and side channel attacks. But for the long term, I'm more fascinated by how the operating system and architecture can be co-designed for defenses or attacks. For projects that I did and contributed to, please see my CV [here](https://ziangtian.github.io/assets/pdf/ziangtian_cv.pdf). 
+ I like to explore the internals and dynamics of computer systems, and my past research experience dealt with building secure memory systems. In the past year, I have been working on two research projects focused on AES-based counter-mode encryption (AES-CTR), a scheme underlying popular trusted execution environments (TEEs). My work centered on optimizing memory controller operations and repurposing cacheline bits, reducing the overhead of metadata access and improving the overall efficiency of security metadata management.
  
- I'm eagerly looking for PhD advisors! Please do not hesitate to contact me via [my email](mailto:ziangtian@whu.edu.cn?subject=PhD)!
+ I am broadly interested in a wide range of research topics at the intersection of computer architecture and security / cryptography. Some topics that interest me are: side-channel attacks (including physical signals, the operating systems and architecture/hardware) and defenses incorporating microarchitecture and OS designs; security issues in edge devices or the cloud. I am also open to exploring other topics that are worthy and challenging. For projects that I did and contributed to, please see my CV [here](https://ziangtian.github.io/assets/pdf/ziangtian_cv.pdf). 
+ 
+ I'm eagerly looking for PhD advisors! Please do not hesitate to contact me via [my email](mailto:ziangtian320@gmail.com?subject=PhD)!
+
+> <small>*If you have trouble pronouncing my name, you can also address me by "Zain", which phonetically resembles "Ziang"* 😄.</small>
+
 
 <!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
